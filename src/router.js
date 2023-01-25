@@ -1,4 +1,4 @@
-import { createBrowserRouter, createHashRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import Cabinet from "./routes/Cabinet";
 import ErrorPage from "./routes/ErrorPage";
 import SignIn from "./routes/SignIn";
