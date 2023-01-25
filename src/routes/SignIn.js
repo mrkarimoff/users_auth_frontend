@@ -20,6 +20,8 @@ const SignIn = () => {
     axios
       .post(config.baseUrl + "/auth/login", values, { withCredentials: true })
       .then((res) => {
+        window.localStorage.setItem("access_token", res.data.access_token);
+        window.localStorage.setItem("userId", res.data.userId);
         navigate("/users_auth_frontend");
       })
       .catch((error) => {
@@ -63,7 +65,7 @@ const SignIn = () => {
               }}
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
-              autoComplete="on"
+              autoComplete="off"
             >
               <Form.Item
                 label="Email"

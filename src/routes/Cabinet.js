@@ -16,8 +16,14 @@ const Cabinet = () => {
   }, []);
 
   const getUsers = () => {
+    const accessToken = localStorage.getItem("access_token");
+    const userId = localStorage.getItem("userId");
+
     axios
-      .get(config.baseUrl + "/", { withCredentials: true })
+      .get(config.baseUrl + "/", {
+        withCredentials: true,
+        headers: { Authorization: `Bearer ${accessToken} ${userId}` },
+      })
       .then((res) => {
         setUsers(res.data);
       })
@@ -31,6 +37,7 @@ const Cabinet = () => {
     axios
       .get(config.baseUrl + "/auth/logout", { withCredentials: true })
       .then((res) => {
+        localStorage.clear();
         navigate("/login");
       })
       .catch((err) => console.log(err));

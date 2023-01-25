@@ -59,7 +59,7 @@ const SignUp = () => {
               layout="vertical"
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
-              autoComplete="on"
+              autoComplete="off"
             >
               <Form.Item
                 label="Username"

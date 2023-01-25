@@ -55,8 +55,16 @@ const UsersTable = ({ users, getUsers }) => {
     setBlockLoading(true);
 
     axios
-      .put(config.baseUrl + "/update/block", selectedRowKeys, { withCredentials: true })
+      .put(
+        config.baseUrl + "/update/block",
+        { selectedRowKeys, userId: localStorage.getItem("userId") },
+        { withCredentials: true }
+      )
       .then((res) => {
+        if (res.data.clearUserId) {
+          localStorage.removeItem("userId");
+          localStorage.removeItem("access_token");
+        }
         toast(res.data.message);
         getUsers();
       })
@@ -72,7 +80,11 @@ const UsersTable = ({ users, getUsers }) => {
     setUnBlockLoading(true);
 
     axios
-      .put(config.baseUrl + "/update/unblock", selectedRowKeys, { withCredentials: true })
+      .put(
+        config.baseUrl + "/update/unblock",
+        { selectedRowKeys, userId: localStorage.getItem("userId") },
+        { withCredentials: true }
+      )
       .then((res) => {
         toast(res.data.message);
         getUsers();
@@ -89,8 +101,16 @@ const UsersTable = ({ users, getUsers }) => {
     setDeleteLoading(true);
 
     axios
-      .put(config.baseUrl + "/update/delete", selectedRowKeys, { withCredentials: true })
+      .put(
+        config.baseUrl + "/update/delete",
+        { selectedRowKeys, userId: localStorage.getItem("userId") },
+        { withCredentials: true }
+      )
       .then((res) => {
+        if (res.data.clearUserId) {
+          localStorage.removeItem("userId");
+          localStorage.removeItem("access_token");
+        }
         toast(res.data.message);
         getUsers();
       })
