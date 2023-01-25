@@ -6,7 +6,7 @@ import SignUp from "./routes/SignUp";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/users_auth_frontend",
     element: <Cabinet />,
     errorElement: <ErrorPage />,
   },
