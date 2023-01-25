@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/users_auth_frontend-/static/css/main.dd3e7246.css",
+    "main.js": "/users_auth_frontend-/static/js/main.885255cf.js",
+    "static/media/Roboto-Regular.ttf": "/users_auth_frontend-/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "index.html": "/users_auth_frontend-/index.html",
+    "main.dd3e7246.css.map": "/users_auth_frontend-/static/css/main.dd3e7246.css.map",
+    "main.885255cf.js.map": "/users_auth_frontend-/static/js/main.885255cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd3e7246.css",
+    "static/js/main.885255cf.js"
+  ]
+}
