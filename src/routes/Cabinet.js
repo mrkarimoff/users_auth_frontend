@@ -20,7 +20,7 @@ const Cabinet = () => {
     const userId = localStorage.getItem("userId");
 
     axios
-      .get(config.baseUrl + "/", {
+      .get(config.baseUrl + "/cabinet", {
         withCredentials: true,
         headers: { Authorization: `Bearer ${accessToken} ${userId}` },
       })
