@@ -23,7 +23,7 @@ const SignUp = () => {
         navigate("/login");
         toast(res.data.message);
       })
-      .catch((error) => toast(error.response.data.message));
+      .catch((error) => toast(error?.response?.data?.message));
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);

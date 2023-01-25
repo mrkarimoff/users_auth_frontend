@@ -22,7 +22,7 @@ const Cabinet = () => {
         setUsers(res.data);
       })
       .catch((err) => {
-        toast(err.response.data.message);
+        toast(err?.response?.data?.message);
         navigate("/login");
       });
   };
