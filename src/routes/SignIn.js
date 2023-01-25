@@ -20,7 +20,7 @@ const SignIn = () => {
     axios
       .post(config.baseUrl + "/auth/login", values, { withCredentials: true })
       .then((res) => {
-        navigate("/users_auth_frontend");
+        navigate("/");
       })
       .catch((error) => {
         toast(error?.response?.data?.message);
