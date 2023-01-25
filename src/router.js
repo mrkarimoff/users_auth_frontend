@@ -6,13 +6,13 @@ import SignUp from "./routes/SignUp";
 
 const router = createBrowserRouter([
   {
-    path: "/login",
-    element: <SignIn />,
+    path: "/",
+    element: <Cabinet />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/users_auth_frontend",
-    element: <Cabinet />,
+    path: "/login",
+    element: <SignIn />,
   },
   {
     path: "/register",
