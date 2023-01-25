@@ -4,7 +4,7 @@ import ErrorPage from "./routes/ErrorPage";
 import SignIn from "./routes/SignIn";
 import SignUp from "./routes/SignUp";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/users_auth_frontend",
     element: <Cabinet />,
