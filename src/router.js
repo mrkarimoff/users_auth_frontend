@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/",
+    path: "/users_auth_frontend",
     element: <Cabinet />,
   },
   {
